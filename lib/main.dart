@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pointofsale/drawer.dart';
+import 'package:pointofsale/mainbody.dart';
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(primaryColor: Colors.black),
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
               onPressed: () {},
             )
           ]),
-      drawer: MyDrawer('_username'),
+      drawer: MyDrawer(_username),
+      body: MainBody(),
     );
   }
 }

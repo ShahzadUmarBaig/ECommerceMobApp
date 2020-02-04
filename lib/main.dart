@@ -38,26 +38,25 @@ class MainScreenState extends State<MainScreen> {
           child: Theme(
             data: Theme.of(context).copyWith(accentColor: Colors.white),
             child: Container(
-              height: 48.0,
-              alignment: Alignment.center,
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: TextField(
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(
-                        vertical: 9.5,
-                      ),
-                      hintText: "Input Search",
-                      hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: Icon(
-                        Icons.search,
-                        color: Colors.white,
-                      ),
-                      border: InputBorder.none),
-                ),
-              ),
-            ),
+                height: 48.0,
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: TextField(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: 9.5,
+                        ),
+                        hintText: "Input Search",
+                        hintStyle: TextStyle(color: Colors.white),
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: Colors.white,
+                        ),
+                        border: InputBorder.none),
+                  ),
+                )),
           ),
         ),
       ),

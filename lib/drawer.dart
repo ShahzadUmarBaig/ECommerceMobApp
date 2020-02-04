@@ -20,7 +20,7 @@ class MyDrawer extends StatelessWidget {
                     child: Image(
                       width: 50,
                       height: 50,
-                      image: AssetImage('assets/images/myPick.png'),
+                      image: AssetImage('assets/myPick.png'),
                     ),
                   ),
                   Positioned(

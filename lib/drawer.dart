@@ -47,19 +47,62 @@ class MyDrawer extends StatelessWidget {
             decoration: BoxDecoration(color: Colors.black),
           ),
           ListTile(
-            title: Text('My Tile'),
+            leading: Icon(Icons.content_paste),
+            title: Text('My orders'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
-          ListTile(
-            title: Text('My Tile'),
-            onTap: () {
-              Navigator.pop(context);
-            },
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 1, color: Colors.grey[300]),
+                bottom: BorderSide(width: 1, color: Colors.grey[300]),
+              ),
+            ),
+            child: Column(
+              children: <Widget>[
+                ListTile(
+                  leading: Icon(Icons.content_paste),
+                  title: Text('My orders'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.content_paste),
+                  title: Text('My orders'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.content_paste),
+                  title: Text('My orders'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.content_paste),
+                  title: Text('My orders'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.content_paste),
+                  title: Text('My orders'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
           ),
           ListTile(
-            title: Text('My Tile'),
+            leading: Icon(Icons.content_paste),
+            title: Text('My orders'),
             onTap: () {
               Navigator.pop(context);
             },

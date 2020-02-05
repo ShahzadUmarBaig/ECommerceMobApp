@@ -9,20 +9,29 @@ class MyScrollView extends StatefulWidget {
 }
 
 class _MyScrollViewState extends State<MyScrollView> {
+  List<Item> myitems = [
+    new Item('Shahzad', 100),
+    new Item('Khalid', 200),
+    new Item('Asim', 155),
+    new Item('Shahbaz', 50),
+    new Item('Sajid', 99),
+    new Item('Fardeen', 12),
+    new Item('Kashif', 44),
+    new Item('Farhan', 26),
+    new Item('Raju', 95),
+    new Item('Sohail', 93),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      mainAxisSpacing: 10,
+    return GridView.builder(
       padding: EdgeInsets.all(10),
-      // Create a grid with 2 columns. If you change the scrollDirection to
-      // horizontal, this produces 2 rows.
-      crossAxisCount: 2,
-      // Generate 100 widgets that display their index in the List.
-      children: List.generate(1, (index) {
-        return GridTile(
-          child: Item(),
-        );
-      }),
+      gridDelegate:
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      itemCount: myitems.length,
+      itemBuilder: (BuildContext context, int index) {
+        return myitems[index];
+      },
     );
   }
 }

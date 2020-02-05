@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class Item extends StatelessWidget {
-  Item({Key key}) : super(key: key);
+  Item(this.name, this.price);
 
-  final name = '';
+  final name;
+  final double price;
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    //Size screenSize = MediaQuery.of(context).size;
 
     return Container(
       margin: EdgeInsets.all(3),
@@ -17,7 +18,24 @@ class Item extends StatelessWidget {
         elevation: 10,
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
-          onTap: () {},
+          onTap: () {
+            showDialog(
+              barrierDismissible: false,
+              context: context,
+              child: AlertDialog(
+                title: Column(
+                  children: <Widget>[
+                    Text(name),
+                    FlatButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text("data"))
+                  ],
+                ),
+              ),
+            );
+          },
           child: Column(children: <Widget>[
             Container(
               decoration: BoxDecoration(
@@ -35,7 +53,7 @@ class Item extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: Text(
-                "Puma Shoes",
+                name,
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
@@ -45,7 +63,7 @@ class Item extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 5),
               child: Text(
-                "3000 Rupees",
+                price.toString() + ' PKR',
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.bold,

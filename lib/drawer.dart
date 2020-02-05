@@ -11,39 +11,59 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           DrawerHeader(
-            child: Container(
-              width: double.infinity,
-              child: Stack(
-                children: <Widget>[
-                  Positioned(
-                    top: 40,
-                    child: Image(
-                      width: 50,
-                      height: 50,
-                      image: AssetImage('assets/myPick.png'),
+            child: Row(
+              children: <Widget>[
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    decoration: new BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        style: BorderStyle.solid,
+                        width: 3,
+                        color: Colors.white,
+                      ),
+                      image: new DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage('assets/cover.jpg'),
+                      ),
                     ),
                   ),
-                  Positioned(
-                    top: 50,
-                    left: 60,
-                    child: Text(
-                      name,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                  )
-                ],
-              ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "Shahzad Umar Baig",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                )
+              ],
             ),
-            decoration: BoxDecoration(
-              color: Colors.black,
-            ),
+            decoration: BoxDecoration(color: Colors.black),
           ),
           ListTile(
-            title: Text("My First Tile"),
+            title: Text('My Tile'),
             onTap: () {
               Navigator.pop(context);
             },
-          )
+          ),
+          ListTile(
+            title: Text('My Tile'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: Text('My Tile'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
         ],
       ),
     );
